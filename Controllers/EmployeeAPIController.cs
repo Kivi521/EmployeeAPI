@@ -50,10 +50,7 @@ namespace EmployeeAPI.Controllers
             //XDocument doc = XDocument.Load(pathWithFileName);
             //XElement root = doc.Root;
             //List<Employee> movies = new List<Employee>();
-            //foreach (XElement ele in root.Elements())
-            //{
-
-            //}
+            
             List<string> a = new List<string>();
             a.Add("hello");
             a.Add("hi");
