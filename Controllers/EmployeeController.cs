@@ -68,8 +68,11 @@ namespace EmployeeAPI.Controllers
             return employees;
         }
 
+
+        //[HttpGet("{id}")]
+
         [HttpPost]
-        public string InsertEmployee(Employee employee)
+        public string InsertEmployee([FromBody] Employee employee)
         {
             Console.WriteLine(employee.Name);
 
@@ -81,14 +84,14 @@ namespace EmployeeAPI.Controllers
         }
 
 
-        [HttpPut]
-        public string UpdateEmployee(int id)
+        [HttpPut("{id}")]
+        public string UpdateEmployee(int id, [FromBody] Employee employee)
         {
             return "Congratulations! your new employee data is saved successfully";
         }
 
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public string DeleteEmployee(string id)
         {
             XDocument doc = XDocument.Load("employees.xml");
